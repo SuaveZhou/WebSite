@@ -435,9 +435,22 @@ footer h5 {
 }
 
 /* 技术栈 */
+/* 技术栈图标样式 */
+.tech-icon {
+    font-size: 48px;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    transition: var(--transition);
+}
+
+.tech-card:hover .tech-icon {
+    transform: scale(1.2);
+    color: var(--secondary-color);
+}
+
 .tech-card {
     background-color: #fff;
-    padding: 20px;
+    padding: 30px 20px;
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     text-align: center;
@@ -448,12 +461,6 @@ footer h5 {
 .tech-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-}
-
-.tech-card img {
-    height: 80px;
-    object-fit: contain;
-    margin-bottom: 15px;
 }
 
 .tech-card h5 {
