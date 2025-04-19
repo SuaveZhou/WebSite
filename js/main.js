@@ -83,7 +83,7 @@ if (contactForm) {
 const carousel = document.querySelector('#home');
 if (carousel) {
     const carouselInstance = new bootstrap.Carousel(carousel, {
-        interval: 5000,
+        interval: 8000,
         ride: 'carousel'
     });
 }
