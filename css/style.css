@@ -1,0 +1,533 @@
+/* 基础样式 */
+:root {
+    --primary-color: #1a237e;
+    --secondary-color: #7986cb;
+    --light-color: #f5f5f5;
+    --dark-color: #121212;
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.line {
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+/* 导航栏 */
+.navbar {
+    padding: 15px 0;
+    transition: var(--transition);
+    background-color: transparent;
+}
+
+.navbar.scrolled {
+    background-color: #fff;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+}
+
+.navbar-brand img {
+    transition: var(--transition);
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #fff;
+    font-weight: 500;
+    padding: 8px 15px;
+    transition: var(--transition);
+}
+
+.navbar.scrolled .navbar-nav .nav-link {
+    color: #333;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+    color: var(--secondary-color);
+}
+
+/* 轮播图 */
+.carousel {
+    height: 100vh;
+    position: relative;
+}
+
+.carousel-item {
+    height: 100vh;
+}
+
+.carousel-item img {
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+
+.carousel-caption {
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: auto;
+    text-align: center;
+}
+
+.carousel-caption h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.carousel-caption p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+/* 关于我们 */
+.about-img {
+    position: relative;
+    padding: 20px;
+}
+
+.about-img img {
+    max-width: 80%;
+    margin: 0 auto;
+    display: block;
+}
+
+.about-features {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.feature {
+    flex: 1 0 33.33%;
+    text-align: center;
+    padding: 15px;
+}
+
+.feature i {
+    font-size: 30px;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.feature h4 {
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+/* 服务卡片 */
+.service-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+    height: 100%;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.service-card .icon {
+    width: 70px;
+    height: 70px;
+    background-color: var(--light-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.service-card .icon i {
+    font-size: 30px;
+    color: var(--primary-color);
+}
+
+.service-card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+/* 团队卡片 */
+.team-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.team-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.team-img img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.team-card:hover .team-img img {
+    transform: scale(1.1);
+}
+
+.team-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.team-info h4 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.team-info p {
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-icons a {
+    width: 35px;
+    height: 35px;
+    background-color: var(--light-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+.social-icons a:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+/* 联系信息 */
+.contact-info {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    height: 100%;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+.info-item i {
+    font-size: 24px;
+    color: var(--primary-color);
+    margin-right: 20px;
+    margin-top: 5px;
+}
+
+.info-item h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.info-item p {
+    color: #777;
+    margin-bottom: 0;
+}
+
+/* 联系表单 */
+.contact-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.form-control {
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid #eee;
+    padding: 10px 15px;
+    font-size: 16px;
+}
+
+textarea.form-control {
+    height: auto;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: var(--primary-color);
+}
+
+/* 页脚 */
+footer {
+    background-color: var(--dark-color);
+    color: #fff;
+}
+
+footer h5 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #bbb;
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    color: #fff;
+    padding-left: 5px;
+}
+
+/* 继续添加到style.css文件末尾 */
+
+/* 订阅表单 */
+.subscribe-form {
+    position: relative;
+    margin-top: 20px;
+}
+
+.subscribe-form input {
+    width: 100%;
+    height: 50px;
+    border-radius: 30px;
+    border: none;
+    padding: 0 20px;
+    padding-right: 50px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.subscribe-form input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.subscribe-form button {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.subscribe-form button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* 版权信息 */
+.copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+}
+
+.copyright p {
+    margin-bottom: 0;
+    color: #bbb;
+}
+
+/* 返回顶部按钮 */
+.back-to-top {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 45px;
+    height: 45px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background-color: var(--secondary-color);
+    color: #fff;
+    transform: translateY(-5px);
+}
+
+/* 页面加载动画 */
+body {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+body.loaded {
+    opacity: 1;
+}
+
+/* 响应式设计 */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background-color: #fff;
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    .navbar-light .navbar-nav .nav-link {
+        color: #333;
+    }
+    
+    .carousel-caption h1 {
+        font-size: 36px;
+    }
+    
+    .carousel-caption p {
+        font-size: 16px;
+    }
+    
+    .section-title h2 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 767px) {
+    .carousel-caption h1 {
+        font-size: 28px;
+    }
+    
+    .carousel-caption p {
+        font-size: 14px;
+    }
+    
+    .section-title h2 {
+        font-size: 26px;
+    }
+    
+    .about-img {
+        margin-bottom: 30px;
+    }
+    
+    .contact-info {
+        margin-bottom: 30px;
+    }
+}
+
+/* 自定义动画 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fadeInUp {
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+/* 木质背景效果 */
+.wood-bg {
+    position: relative;
+}
+
+.wood-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/wood-texture.jpg');
+    background-size: cover;
+    opacity: 0.1;
+    z-index: -1;
+}
