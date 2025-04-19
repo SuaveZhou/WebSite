@@ -448,6 +448,25 @@ footer h5 {
     color: var(--secondary-color);
 }
 
+/* Flutter图标特殊处理 */
+.tech-icon.flutter-icon:before {
+    content: "\f3e2"; /* 使用mobile-alt图标作为替代 */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+.tech-icon.flutter-icon:after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #54C5F8; /* Flutter蓝色 */
+    transform: rotate(45deg);
+    top: calc(50% - 10px);
+    left: calc(50% - 10px);
+    z-index: -1;
+}
+
 .tech-card {
     background-color: #fff;
     padding: 30px 20px;
@@ -456,6 +475,8 @@ footer h5 {
     text-align: center;
     transition: var(--transition);
     height: 100%;
+    position: relative; /* 为Flutter图标定位添加 */
+    overflow: hidden; /* 确保伪元素不溢出 */
 }
 
 .tech-card:hover {
