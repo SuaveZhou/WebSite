@@ -718,3 +718,21 @@ body.loaded {
         font-size: 14px;
     }
 }
+
+/* 导航栏标语 */
+.navbar-brand .slogan {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    display: none;
+}
+
+.navbar.scrolled .navbar-brand .slogan {
+    color: #333;
+}
+
+@media (min-width: 768px) {
+    .navbar-brand .slogan {
+        display: inline-block;
+    }
+}
