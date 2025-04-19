@@ -531,3 +531,46 @@ body.loaded {
     opacity: 0.1;
     z-index: -1;
 }
+
+/* 轮播图文字底部显示 */
+.carousel-caption-bottom {
+    top: auto;
+    bottom: 50px;
+    transform: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.carousel-caption-bottom h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.carousel-caption-bottom p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+    .carousel-caption-bottom {
+        bottom: 20px;
+        padding: 15px;
+    }
+    
+    .carousel-caption-bottom h1 {
+        font-size: 24px;
+    }
+    
+    .carousel-caption-bottom p {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    
+    .carousel-caption-bottom .btn {
+        padding: 5px 15px;
+        font-size: 12px;
+    }
+}
