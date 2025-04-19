@@ -111,24 +111,6 @@ a:hover {
     filter: brightness(0.7);
 }
 
-.carousel-caption {
-    top: 50%;
-    transform: translateY(-50%);
-    bottom: auto;
-    text-align: center;
-}
-
-.carousel-caption h1 {
-    font-size: 48px;
-    font-weight: 700;
-    margin-bottom: 20px;
-}
-
-.carousel-caption p {
-    font-size: 20px;
-    margin-bottom: 30px;
-}
-
 /* 关于我们 */
 .about-img {
     position: relative;
@@ -534,43 +516,40 @@ body.loaded {
 
 /* 轮播图文字底部显示 */
 .carousel-caption-bottom {
-    top: auto;
-    bottom: 50px;
-    transform: none;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 5px;
-    max-width: 80%;
-    margin: 0 auto;
+    display: none; /* 不再使用此样式 */
 }
 
-.carousel-caption-bottom h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
+/* 恢复原来的轮播图文字样式 */
+.carousel-caption {
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: auto;
+    text-align: center;
+    background-color: transparent; /* 去掉半透明背景 */
 }
 
-.carousel-caption-bottom p {
-    font-size: 18px;
-    margin-bottom: 15px;
+.carousel-caption h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.carousel-caption p {
+    font-size: 20px;
+    margin-bottom: 30px;
 }
 
 @media (max-width: 768px) {
-    .carousel-caption-bottom {
-        bottom: 20px;
-        padding: 15px;
+    .carousel-caption h1 {
+        font-size: 28px;
     }
     
-    .carousel-caption-bottom h1 {
-        font-size: 24px;
-    }
-    
-    .carousel-caption-bottom p {
+    .carousel-caption p {
         font-size: 14px;
-        margin-bottom: 10px;
     }
     
-    .carousel-caption-bottom .btn {
-        padding: 5px 15px;
-        font-size: 12px;
+    .carousel-caption .btn {
+        padding: 8px 20px;
+        font-size: 14px;
     }
 }
