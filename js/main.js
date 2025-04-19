@@ -71,3 +71,30 @@ if (carousel) {
 window.addEventListener('load', function() {
     document.body.classList.add('loaded');
 });
+
+// 项目筛选功能
+document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.portfolio-filter .btn');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // 移除所有按钮的active类
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            // 为当前按钮添加active类
+            this.classList.add('active');
+            
+            const filterValue = this.getAttribute('data-filter');
+            
+            portfolioItems.forEach(item => {
+                if (filterValue === '*') {
+                    item.style.display = 'block';
+                } else if (item.classList.contains(filterValue.substring(1))) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
+});
