@@ -15,6 +15,27 @@ window.addEventListener('scroll', function() {
     }
 });
 
+// 导航栏选中效果
+window.addEventListener('scroll', function() {
+    const sections = document.querySelectorAll('section[id]');
+    const scrollPosition = window.scrollY + 100; // 添加偏移量以提前激活
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        const sectionId = section.getAttribute('id');
+        
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+            document.querySelectorAll('.navbar .nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + sectionId) {
+                    link.classList.add('active');
+                }
+            });
+        }
+    });
+});
+
 // 平滑滚动
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
